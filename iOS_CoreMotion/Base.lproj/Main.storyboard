@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LNS-tN-g1n">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -39,6 +39,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mP-5o-iQL">
+                                <rect key="frame" x="10" y="384" width="104" height="128"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zLe-Pt-KTJ">
                                 <rect key="frame" x="10" y="54" width="394" height="798"/>
                                 <subviews>
@@ -68,10 +72,13 @@
                             <constraint firstItem="A7m-jG-9RB" firstAttribute="bottom" secondItem="zLe-Pt-KTJ" secondAttribute="bottom" constant="10" id="AMt-Pj-GzY"/>
                             <constraint firstItem="A7m-jG-9RB" firstAttribute="trailing" secondItem="zLe-Pt-KTJ" secondAttribute="trailing" constant="10" id="Bw5-s9-GFD"/>
                             <constraint firstItem="zLe-Pt-KTJ" firstAttribute="top" secondItem="A7m-jG-9RB" secondAttribute="top" constant="10" id="SbV-kv-8kf"/>
+                            <constraint firstItem="5mP-5o-iQL" firstAttribute="leading" secondItem="A7m-jG-9RB" secondAttribute="leading" constant="10" id="VYA-VZ-4Ga"/>
                             <constraint firstItem="zLe-Pt-KTJ" firstAttribute="leading" secondItem="A7m-jG-9RB" secondAttribute="leading" constant="10" id="aaK-fw-USK"/>
+                            <constraint firstItem="A7m-jG-9RB" firstAttribute="trailing" secondItem="5mP-5o-iQL" secondAttribute="trailing" constant="300" id="sWw-zQ-N8Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A7m-jG-9RB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xat-bQ-PkJ"/>
                     <connections>
                         <outlet property="xLabel" destination="YTP-4h-27F" id="RlV-ec-jOV"/>
                         <outlet property="yLabel" destination="G9E-uz-hqa" id="hMg-cH-NuK"/>

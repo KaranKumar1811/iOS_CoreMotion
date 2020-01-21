@@ -25,6 +25,19 @@ class XYZVC: UIViewController {
         motionManager.startAccelerometerUpdates(to: .main){data,error in
             guard let accelerometerData = data else {return}
             
+            let formatter = NumberFormatter()
+            formatter.minimumFractionDigits = 1
+            formatter.maximumFractionDigits = 2
+            
+            let x = formatter.string(for:  accelerometerData.acceleration.x)!
+            
+            let y = formatter.string(for:  accelerometerData.acceleration.y)!
+            let z = formatter.string(for:  accelerometerData.acceleration.z)!
+        
+            
+            self.xLabel.text = "X : \(x)"
+            self.yLabel.text = "Y : \(y)"
+            self.zLabel.text = "Z : \(z)"
         }
         // Do any additional setup after loading the view.
     }
