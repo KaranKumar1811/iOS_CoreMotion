@@ -58,9 +58,9 @@ class XYZVC: UIViewController {
         let screenHeight = screen.height
         
         UIView.animate(withDuration: 0){
-            guard (xPosition >= 0 && xPosition + width <= screenWidth) && (yPosition >= 0 && yPosition+height <= screenHeight) else {return}
-            
-            self.square.frame = CGRect(x: xPosition + x, y: yPosition - y, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+           guard (xPosition + x >= 0 && xPosition + width + x <= screenWidth) && (yPosition - y >= 0 && yPosition + height - y <= screenHeight) else {return}
+             
+            self.square.frame = CGRect(x: xPosition + x, y: yPosition - y, width: width, height: height)
         }
         
        }
