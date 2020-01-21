@@ -11,6 +11,7 @@ import CoreMotion
 
 class XYZVC: UIViewController {
 
+    @IBOutlet weak var square: UIView!
     @IBOutlet weak var xLabel: UILabel!
     @IBOutlet weak var yLabel: UILabel!
     @IBOutlet weak var zLabel: UILabel!
@@ -43,6 +44,25 @@ class XYZVC: UIViewController {
     }
     
 
-    
+    func moveSquare(x : CGFloat , y : CGFloat ){
+        let xPosition = square.frame.origin.x
+        let yPosition = square.frame.origin.y
+        
+        let width = square.frame.size.width
+        let height = square.frame.size.height
+        
+        //get device frame size
+        
+        let screen = UIScreen.main.bounds
+        let screenWidth = screen.width
+        let screenHeight = screen.height
+        
+        UIView.animate(withDuration: 0){
+            guard (xPosition >= 0 && xPosition + width <= screenWidth) && (yPosition >= 0 && yPosition+height <= screenHeight) else {return}
+            
+            self.square.frame = CGRect(x: xPosition + x, y: yPosition - y, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+        }
+        
+       }
 
 }
